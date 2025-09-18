@@ -1,0 +1,5 @@
+device_id,ts,temperature,humidity,status
+device01,2025-09-18T10:00:00Z,25.7,72.1,OK
+device02,2025-09-18T10:00:01Z,31.2,55.4,WARN
+device01,2025-09-18T10:00:02Z,26.1,71.8,OK
+device03,2025-09-18T10:00:03Z,40.0,20.0,ALERT
