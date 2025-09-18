@@ -15,6 +15,7 @@ $docker  compose ps
 ```
 
 ### 2.2 Build and start producer to generate realtime data
+* Generate data every x seconds
 * order data
 * payment data
 ```
@@ -24,6 +25,7 @@ $docker  compose ps
 ```
 
 ### 2.3 Build and run test with dbt
+* Check data every x seconds
 ```
 $docker compose build dbt
 $docker compose up -d dbt
