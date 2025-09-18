@@ -113,3 +113,13 @@ GROUP BY 1
 ORDER BY 1;
 ```
 
+## 7. Start Web Input
+```
+$docker compose build data-input-web
+$docker compose up -d data-input-web
+$docker compose ps
+```
+
+Open web to input data
+* http://localhost:8080
+

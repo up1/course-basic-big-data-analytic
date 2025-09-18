@@ -68,3 +68,12 @@ services:
     - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
     depends_on:
     - postgres
+  
+  data-input-web:
+    build: ./data-input-web
+    container_name: data-input-web
+    env_file: .env
+    ports:
+      - "${WEB_INPUT_PORT}:3000"
+    depends_on:
+      - fluent-bit

@@ -80,7 +80,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\n$__timeGroup(ts, '1h') AS time,\nstatus,\ncount(*) AS alerts\nFROM measurements\nWHERE $__timeFilter(ts)\nGROUP BY 1, 2\nORDER BY 1;",
+          "rawSql": "SELECT\nstatus,\ncount(*) AS alerts\nFROM measurements\nWHERE $__timeFilter(ts)\nGROUP BY 1\nORDER BY 1;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -101,7 +101,7 @@
           }
         }
       ],
-      "title": "Alerts per hour",
+      "title": "Alerts per type",
       "type": "piechart"
     },
     {
@@ -406,5 +406,5 @@
   "timezone": "browser",
   "title": "Sample IOT",
   "uid": "a9f74522-964c-47bb-a77c-8f06abe6c079",
-  "version": 10
+  "version": 1
 }
