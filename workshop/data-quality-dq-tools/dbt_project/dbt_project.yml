@@ -23,5 +23,5 @@ vars:
 
 
 # Run-end hook to persist test results
-on-run-end:
-  - "{{ dq_tools.store_test_results(results) }}"
+# on-run-end:
+#   - "{{ dq_tools.store_test_results(results) }}"
