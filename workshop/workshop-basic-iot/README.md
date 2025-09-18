@@ -1,4 +1,6 @@
 # Workshop with IoT and messaging
+* IoT Data Pipeline 
+  * CSV → MQTT → Fluent Bit → PostgreSQL
 * Data pipeline
   * Data source :: event from sensor
   * [MQTT](https://mqtt.org/)
@@ -7,6 +9,17 @@
     * Output = HTTP SERVER (REST API)
   * HTTP Server with database
   * Dashboard with [grafana](https://grafana.com/)
+
+## 0. Architecture
+```
+CSV ──► Python Publisher ──► MQTT (Mosquitto)
+                                │
+                                ▼
+                                Fluent Bit (transform/validate)
+                                │ HTTP (JSON)
+                                ▼
+                                FastAPI Sink ► PostgreSQL
+```
 
 ## 1. Start Fluent-bit
 ```
