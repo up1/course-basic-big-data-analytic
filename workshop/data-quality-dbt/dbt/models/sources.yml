@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: nrt_src
+    tables:
+      - name: orders_raw
+        freshness:
+          warn_after: {count: 5, period: minute}
+          error_after: {count: 15, period: minute}
+        loaded_at_field: event_time
+      - name: payments_raw
+        freshness:
+          warn_after: {count: 5, period: minute}
+          error_after: {count: 15, period: minute}
+        loaded_at_field: event_time

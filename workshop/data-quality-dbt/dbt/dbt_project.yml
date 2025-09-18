@@ -1,0 +1,13 @@
+name: 'nrt_nrt'
+version: '1.0'
+profile: 'nrt_nrt'
+model-paths: ['models']
+test-paths: ['tests']
+models:
+  nrt_nrt:
+    +materialized: view
+    staging:
+      +materialized: table
+    marts:
+      +materialized: incremental
+      +on_schema_change: append_new_columns
