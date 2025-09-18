@@ -1,0 +1,6 @@
+dbt-core
+# adapter for DuckDB
+dbt-duckdb
+# utilities for the python script
+duckdb
+pandas

@@ -1,0 +1,9 @@
+# ~/.dbt/profiles.yml (mounted inside container)
+dqtools_workshop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: warehouse/workshop.duckdb
+      threads: 4
+      # optional: keep_open: false

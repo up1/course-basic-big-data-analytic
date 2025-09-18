@@ -1,0 +1,12 @@
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    working_dir: /workspace
+    volumes:
+      - ./dbt_project:/workspace
+      - ./profiles:/root/.dbt
+      - ./warehouse:/workspace/warehouse
+      - ./tools:/workspace/tools
+    tty: true

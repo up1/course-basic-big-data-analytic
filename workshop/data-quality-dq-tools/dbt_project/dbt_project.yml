@@ -1,0 +1,27 @@
+name: dqtools_workshop
+version: 1.0.0
+config-version: 2
+profile: dqtools_workshop
+
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+
+models:
+  dq_tools:
+    +schema: AUDIT # where dq-tools models & log table will live
+
+
+# Enable storing test results to DQ_ISSUE_LOG
+vars:
+  dq_tools_enable_store_test_results: true
+  dbt_dq_tool_schema: AUDIT
+  dbt_utils_timespine_config:
+    enabled: true
+
+
+# Run-end hook to persist test results
+on-run-end:
+  - "{{ dq_tools.store_test_results(results) }}"

@@ -1,0 +1,6 @@
+id,customer_id,amount,status,created_at
+100,1,120,paid,2024-01-12
+101,1,80,paid,2024-02-05
+102,2,50,cancelled,2024-05-03
+103,2,75,paid,2024-05-04
+104,4,200,paid,2024-06-01

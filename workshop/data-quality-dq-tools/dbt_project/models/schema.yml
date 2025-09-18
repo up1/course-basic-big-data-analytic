@@ -1,0 +1,31 @@
+version: 2
+
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+        - dq_tools.unique_where_db: {}
+        - dq_tools.not_null_where_db: {}
+      # - name: created_at
+      #   tests:
+      #     - dq_tools.recency_db: {datepart: day, interval: 365}
+
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - dq_tools.unique_where_db: {}
+      - name: customer_id
+        tests:
+          - dq_tools.relationships_where_db: {to: ref('stg_customers'), field: customer_id}
+      - name: status
+        tests:
+          - dq_tools.accepted_values_where_db: {values: [paid, cancelled]}
+
+
+  - name: dim_customers
+    tests:
+      - dq_tools.equal_rowcount_where_db: {compare_model: ref('stg_customers')}
