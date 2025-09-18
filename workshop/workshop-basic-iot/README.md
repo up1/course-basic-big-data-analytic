@@ -49,3 +49,67 @@ $docker  compose up data-publisher --build
 $docker exec -it postgres psql -U admin -d iot -c "SELECT device_id, ts, temperature, humidity, status FROM measurements ORDER BY ts LIMIT 10;"
 ```
 
+## 5. Start Grafana dashboard
+* Data source = PostgreSQL
+
+```
+$docker compose up -d grafana
+$docker compose ps
+```
+
+Open grafana dashboard
+* http://localhost:3000
+  * user=admin
+  * password=admin123
+
+## 6. Config IoT dashboard
+* In Grafana → Dashboards → New → Add visualization → Postgres (IoT)
+
+### Temperature by device
+* Panel type: Bar chart
+```
+SELECT
+device_id,
+avg(temperature) AS value
+FROM measurements
+WHERE $__timeFilter(ts) AND temperature IS NOT NULL
+GROUP BY 1
+ORDER BY 1;
+```
+
+### Latest status per device (table)
+* Panel type: Table
+```
+SELECT DISTINCT ON (device_id)
+device_id,
+ts,
+status,
+temperature,
+humidity
+FROM measurements
+WHERE ts >= now() - interval '30 days'
+ORDER BY device_id, ts DESC;
+```
+
+### Alerts per hour
+```
+SELECT
+$__timeGroup(ts, '1h') AS time,
+count(*) AS alerts
+FROM measurements
+WHERE $__timeFilter(ts) AND status = 'ALERT'
+GROUP BY 1
+ORDER BY 1;
+```
+
+### Humidity percentile (p90) over time
+```
+SELECT
+$__timeGroup(ts, $__interval) AS time,
+PERCENTILE_CONT(0.90) WITHIN GROUP (ORDER BY humidity) AS p90_humidity
+FROM measurements
+WHERE $__timeFilter(ts) AND humidity IS NOT NULL
+GROUP BY 1
+ORDER BY 1;
+```
+
