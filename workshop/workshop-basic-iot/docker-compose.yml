@@ -14,6 +14,11 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     ports:
       - "5432:5432"
     volumes:
@@ -24,4 +29,26 @@ services:
     container_name: sink_api
     env_file: .env
     ports:
-    - "${API_PORT}:8000"
+      - "${API_PORT}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+  
+  fluent-bit:
+    image: cr.fluentbit.io/fluent/fluent-bit:2.0
+    container_name: fluent-bit
+    env_file: .env
+    volumes:
+    - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf:ro
+    - ./fluent-bit/parsers.conf:/fluent-bit/etc/parsers.conf:ro
+    command: ["/fluent-bit/bin/fluent-bit", "-c", "/fluent-bit/etc/fluent-bit.conf", "-m", "*"]
+
+  data-publisher:
+    build: ./data-publisher
+    container_name: data-publisher
+    env_file: .env
+    tty: true
+    volumes:
+      - ./data:/app/data:ro
+    # Example command; override with your CSV path if different
+    command: ["python", "publish_csv.py", "/app/data/sensors.csv"]
