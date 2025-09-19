@@ -1,0 +1,6 @@
+order_id,sku,qty,due_date,priority,ship_zone,penalty_per_day,est_ship_days
+O-1001,S-RED-01,40,2025-09-22,1,A,50.0,1
+O-1002,S-BLU-02,20,2025-09-21,2,B,30.0,2
+O-1003,S-RED-01,10,2025-09-20,1,A,80.0,1
+O-1004,S-GRN-03,70,2025-09-25,3,C,20.0,3
+O-1005,S-RED-01,30,2025-09-23,2,B,40.0,2
