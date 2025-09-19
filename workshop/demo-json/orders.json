@@ -1,0 +1,571 @@
+[
+  {
+    "order_id": "ORD-1001",
+    "order_date": "2025-09-11T21:28:00",
+    "customer": {
+      "customer_id": "C001",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 7880.0
+    },
+    "shipping_address": {
+      "city": "Khon Kaen",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P003",
+        "product_name": "USB-C Hub",
+        "unit_price": 1290.0,
+        "quantity": 1,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 80.0,
+    "discount": 50.0
+  },
+  {
+    "order_id": "ORD-1002",
+    "order_date": "2025-09-12T22:35:00",
+    "customer": {
+      "customer_id": "C002",
+      "name": "Bob",
+      "email": "bob@example.com"
+    },
+    "status": "pending",
+    "payment": {
+      "method": "promptpay",
+      "currency": "THB",
+      "amount": 5200.0
+    },
+    "shipping_address": {
+      "city": "Phuket",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 2,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 2,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 100.0,
+    "discount": 150.0
+  },
+  {
+    "order_id": "ORD-1003",
+    "order_date": "2025-09-09T18:11:00",
+    "customer": {
+      "customer_id": "C001",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 7670.0
+    },
+    "shipping_address": {
+      "city": "Khon Kaen",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 2,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P004",
+        "product_name": "27\" Monitor",
+        "unit_price": 5990.0,
+        "quantity": 1,
+        "category": "Displays"
+      }
+    ],
+    "shipping_fee": 100.0,
+    "discount": 0.0
+  },
+  {
+    "order_id": "ORD-1004",
+    "order_date": "2025-09-14T20:43:00",
+    "customer": {
+      "customer_id": "C001",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 8430.0
+    },
+    "shipping_address": {
+      "city": "Chiang Mai",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 80.0,
+    "discount": 100.0
+  },
+  {
+    "order_id": "ORD-1005",
+    "order_date": "2025-09-09T02:59:00",
+    "customer": {
+      "customer_id": "C002",
+      "name": "Bob",
+      "email": "bob@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 3110.0
+    },
+    "shipping_address": {
+      "city": "Phuket",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 2,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 2,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 0.0,
+    "discount": 50.0
+  },
+  {
+    "order_id": "ORD-1006",
+    "order_date": "2025-09-12T01:46:00",
+    "customer": {
+      "customer_id": "C001",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "promptpay",
+      "currency": "THB",
+      "amount": 4000.0
+    },
+    "shipping_address": {
+      "city": "Chiang Mai",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 2,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 2,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 100.0,
+    "discount": 150.0
+  },
+  {
+    "order_id": "ORD-1007",
+    "order_date": "2025-09-14T21:53:00",
+    "customer": {
+      "customer_id": "C004",
+      "name": "Dao",
+      "email": "dao@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "promptpay",
+      "currency": "THB",
+      "amount": 2680.0
+    },
+    "shipping_address": {
+      "city": "Chiang Mai",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 60.0,
+    "discount": 50.0
+  },
+  {
+    "order_id": "ORD-1008",
+    "order_date": "2025-09-09T01:13:00",
+    "customer": {
+      "customer_id": "C004",
+      "name": "Dao",
+      "email": "dao@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "credit_card",
+      "currency": "THB",
+      "amount": 5360.0
+    },
+    "shipping_address": {
+      "city": "Phuket",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 1,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P003",
+        "product_name": "USB-C Hub",
+        "unit_price": 1290.0,
+        "quantity": 2,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 100.0,
+    "discount": 0.0
+  },
+  {
+    "order_id": "ORD-1009",
+    "order_date": "2025-09-15T02:59:00",
+    "customer": {
+      "customer_id": "C002",
+      "name": "Bob",
+      "email": "bob@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "credit_card",
+      "currency": "THB",
+      "amount": 5890.0
+    },
+    "shipping_address": {
+      "city": "Khon Kaen",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P004",
+        "product_name": "27\" Monitor",
+        "unit_price": 5990.0,
+        "quantity": 1,
+        "category": "Displays"
+      }
+    ],
+    "shipping_fee": 0.0,
+    "discount": 100.0
+  },
+  {
+    "order_id": "ORD-1010",
+    "order_date": "2025-09-14T01:00:00",
+    "customer": {
+      "customer_id": "C003",
+      "name": "Chai",
+      "email": "chai@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 7430.0
+    },
+    "shipping_address": {
+      "city": "Bangkok",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P003",
+        "product_name": "USB-C Hub",
+        "unit_price": 1290.0,
+        "quantity": 3,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P002",
+        "product_name": "Gaming Mouse",
+        "unit_price": 890.0,
+        "quantity": 1,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 100.0,
+    "discount": 100.0
+  },
+  {
+    "order_id": "ORD-1011",
+    "order_date": "2025-09-15T00:57:00",
+    "customer": {
+      "customer_id": "C003",
+      "name": "Chai",
+      "email": "chai@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "credit_card",
+      "currency": "THB",
+      "amount": 5520.0
+    },
+    "shipping_address": {
+      "city": "Phuket",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 0.0,
+    "discount": 150.0
+  },
+  {
+    "order_id": "ORD-1012",
+    "order_date": "2025-09-12T00:23:00",
+    "customer": {
+      "customer_id": "C001",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 17920.0
+    },
+    "shipping_address": {
+      "city": "Bangkok",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P004",
+        "product_name": "27\" Monitor",
+        "unit_price": 5990.0,
+        "quantity": 3,
+        "category": "Displays"
+      }
+    ],
+    "shipping_fee": 100.0,
+    "discount": 150.0
+  },
+  {
+    "order_id": "ORD-1013",
+    "order_date": "2025-09-07T22:46:00",
+    "customer": {
+      "customer_id": "C001",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "promptpay",
+      "currency": "THB",
+      "amount": 5110.0
+    },
+    "shipping_address": {
+      "city": "Khon Kaen",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P003",
+        "product_name": "USB-C Hub",
+        "unit_price": 1290.0,
+        "quantity": 3,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P003",
+        "product_name": "USB-C Hub",
+        "unit_price": 1290.0,
+        "quantity": 1,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 0.0,
+    "discount": 50.0
+  },
+  {
+    "order_id": "ORD-1014",
+    "order_date": "2025-09-14T03:41:00",
+    "customer": {
+      "customer_id": "C003",
+      "name": "Chai",
+      "email": "chai@example.com"
+    },
+    "status": "paid",
+    "payment": {
+      "method": "credit_card",
+      "currency": "THB",
+      "amount": 5600.0
+    },
+    "shipping_address": {
+      "city": "Phuket",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      }
+    ],
+    "shipping_fee": 80.0,
+    "discount": 150.0
+  },
+  {
+    "order_id": "ORD-1015",
+    "order_date": "2025-09-08T22:22:00",
+    "customer": {
+      "customer_id": "C004",
+      "name": "Dao",
+      "email": "dao@example.com"
+    },
+    "status": "pending",
+    "payment": {
+      "method": "bank_transfer",
+      "currency": "THB",
+      "amount": 24280.0
+    },
+    "shipping_address": {
+      "city": "Khon Kaen",
+      "country": "TH"
+    },
+    "items": [
+      {
+        "sku": "P005",
+        "product_name": "Laptop Stand",
+        "unit_price": 790.0,
+        "quantity": 1,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P001",
+        "product_name": "Mechanical Keyboard",
+        "unit_price": 1890.0,
+        "quantity": 3,
+        "category": "Accessories"
+      },
+      {
+        "sku": "P004",
+        "product_name": "27\" Monitor",
+        "unit_price": 5990.0,
+        "quantity": 3,
+        "category": "Displays"
+      }
+    ],
+    "shipping_fee": 0.0,
+    "discount": 150.0
+  }
+]
